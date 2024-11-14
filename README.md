@@ -36,7 +36,7 @@ Include the toast component in your app.vue or a global layout:
   ```vue
   <template>
     <div>
-      <Toast />
+        <MainToaster />
         <NuxtPage />
       </div>
   </template>
