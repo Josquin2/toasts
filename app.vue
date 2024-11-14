@@ -11,7 +11,7 @@ interface ToastTriggerOption {
   options: ToastOptions;
 }
 
-// Настройки для кнопок и соответствующих тостов
+// settings for buttons and corresponding toasts
 const buttonOptions: ToastTriggerOption[] = [
   {
     id: 1,
@@ -55,7 +55,7 @@ const buttonOptions: ToastTriggerOption[] = [
   },
 ];
 
-// Функция вызова тоста
+// toast call function
 function triggerToast(option: ToastTriggerOption) {
   toastsStore.toast(option.message, option.options);
 }
@@ -76,7 +76,7 @@ function triggerToast(option: ToastTriggerOption) {
     </div>
   </div>
 
-  <MainToast />
+  <MainToaster />
 </template>
 
 <style lang="scss">
