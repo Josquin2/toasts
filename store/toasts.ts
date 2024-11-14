@@ -17,7 +17,6 @@ export const useToastsStore = () => {
         duration: options?.duration ?? defaultDuration,
         position: options?.position ?? defaultPosition,
         theme: options?.theme ?? "dark",
-        type: options?.type ?? "message",
       },
     };
 

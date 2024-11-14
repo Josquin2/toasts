@@ -18,12 +18,6 @@
             :class="'toast--theme--' + toast?.options?.theme"
           >
             <div class="toast__content">
-              <img
-                class="toast__icon"
-                src=""
-                alt=""
-                v-if="toast?.options.type !== 'message'"
-              />
               <p class="toast__text">{{ toast.text }}</p>
             </div>
             <div
