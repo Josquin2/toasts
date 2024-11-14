@@ -1,75 +1,65 @@
-# Nuxt Minimal Starter
+# Nuxt 3 Toast Notifications
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A fully customizable toast notification system for Nuxt 3. This project includes a toast store, a toast component, and a demo component with buttons to trigger toasts.
 
-## Setup
+<br />
 
-Make sure to install dependencies:
+## Features
 
-```bash
-# npm
-npm install
+- Customizable positions: `top-left`, `top-right`, `bottom-left`, `bottom-right`.
+- Multiple themes: `dark`, `light`.
+- Auto-dismissal after a configurable duration.
+- Smooth animations.
 
-# pnpm
-pnpm install
+<br />
 
-# yarn
-yarn install
+## Installation
 
-# bun
-bun install
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:Josquin2/toasts.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+<br />
+
+## Usage
+### 1. Import and Add the Toast Component
+Include the toast component in your app.vue or a global layout:
+  ```vue
+  <template>
+    <div>
+      <Toast />
+        <NuxtPage />
+      </div>
+  </template>
 ```
 
-## Development Server
+### 2. Call the Toasts Store
+Use the toast store to trigger notifications from anywhere in your application:
+  ```js
+  import { useToastsStore } from "@/store/toasts";
 
-Start the development server on `http://localhost:3000`:
+  const toastsStore = useToastsStore();
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+  toastsStore.toast("This is a message!", {
+    duration: 3000,
+    position: "top-right",
+    theme: "dark",
+  });
 ```
 
-## Production
 
-Build the application for production:
+<br />
 
-```bash
-# npm
-npm run build
+## Contributing
+Feel free to submit issues or pull requests. All contributions are welcome!
 
-# pnpm
-pnpm build
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
